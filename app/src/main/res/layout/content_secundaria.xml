@@ -9,22 +9,31 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".U3_A_Teacher"
-    tools:showIn="@layout/activity_u3__a__teacher"
+    tools:context="com.example.carlos.u3_a_teacher.Secundaria"
+    tools:showIn="@layout/activity_secundaria"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnDatosTelefonoBuscador"
+
+    <EditText
+        android:id="@+id/etCadea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onDatosTelfBuscadorClick"
-        android:text="Datos/Teléfono/Buscador" />
+        android:hint="Introduce unha cadea"
+        android:inputType="text"
+        android:imeOptions="actionNext"/>
 
+    <EditText
+        android:id="@+id/etTelf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Introduce un teléfono"
+        android:inputType="phone" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onDatosClick"
-        android:text="Datos" />
+        android:onClick="onPecharClick"
+        android:text="Pechar" />
+
 
 </LinearLayout>

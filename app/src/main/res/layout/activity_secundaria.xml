@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".U3_A_Teacher">
+    tools:context="com.example.carlos.u3_a_teacher.Secundaria">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_u3__a__teacher" />
+    <include layout="@layout/content_secundaria" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
