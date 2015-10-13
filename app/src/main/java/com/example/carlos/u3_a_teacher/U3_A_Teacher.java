@@ -107,7 +107,7 @@ public class U3_A_Teacher extends AppCompatActivity {
         final CharSequence[] accion = {"Buscar cadea", "Chamar"};
         venta.setSingleChoiceItems(accion, 0, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int opcion) {
-                Intent intent = new Intent();
+                Intent intent =null;
                 if (opcion == 0) {
                     if (cadea.equals(""))
                         cadea = "casa";
@@ -121,7 +121,7 @@ public class U3_A_Teacher extends AppCompatActivity {
                     else
                         intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + telefono));
                 }
-                startActivity(intent);
+                if (intent!=null) startActivity(intent);
                 dialog.dismiss();
             }
         });
