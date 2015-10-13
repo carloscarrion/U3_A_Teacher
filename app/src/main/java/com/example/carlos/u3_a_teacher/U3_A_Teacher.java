@@ -20,8 +20,8 @@ import android.widget.Toast;
 
 public class U3_A_Teacher extends AppCompatActivity {
 
-    String cadea;
-    String telefono;
+    String cadea = "";
+    String telefono ="";
     AlertDialog.Builder venta;
 
     @Override
@@ -40,8 +40,13 @@ public class U3_A_Teacher extends AppCompatActivity {
             }
         });
 
-        cadea = "";
-        telefono = "";
+        //Usamos esta comprobación no canto de usar: protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        // que está máis abaixo, pero comentado.
+        if (savedInstanceState!=null){
+            cadea = savedInstanceState.getString("CADEA");
+            telefono = savedInstanceState.getString("TELEFONO");
+        }
+
 
         Button btn_DatosTelefonoBuscador = (Button) findViewById(R.id.btnDatosTelefonoBuscador);
 
@@ -85,13 +90,13 @@ public class U3_A_Teacher extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }
 
-    @Override
+    /* @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
 
         cadea = savedInstanceState.getString("CADEA");
         telefono = savedInstanceState.getString("TELEFONO");
-    }
+    }*/
 
     @Override
     protected Dialog onCreateDialog(int id) {
